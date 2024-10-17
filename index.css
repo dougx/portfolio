@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -25,7 +26,7 @@ main {
 
 header {
   position: relative;
-  height: 10vh;
+  /* height: 10vh; */
   padding: 5% 8%;
   font-weight: 500;
   display: flex;
@@ -140,8 +141,34 @@ a:visited {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  header > ul, span {
+    font-size: .9rem;
+  }
+
+  .portfolio-container {
+    padding-top: 5vh;
+    width: 100%;
+  }
+
+  .portfolio-title {
+    padding-top: 3rem;
+    margin-left: 2.5rem;
+  }
+
   .line {
     display: none;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  main > .content {
+    width: max-content;
+  }
+
+  .content .numbered-title {
+    font-size: 4rem;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -149,12 +176,10 @@ a:visited {
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
 }
